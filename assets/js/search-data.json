@@ -1,0 +1,401 @@
+{"0": {
+    "doc": "CRM - customer relationship managment",
+    "title": "The CRM society and it’s future",
+    "content": " ",
+    "url": "/docs/crm/0_someexp.html#the-crm-society-and-its-future",
+    
+    "relUrl": "/docs/crm/0_someexp.html#the-crm-society-and-its-future"
+  },"1": {
+    "doc": "CRM - customer relationship managment",
+    "title": "Index of Contents",
+    "content": ". | The Motivation | . ",
+    "url": "/docs/crm/0_someexp.html#index-of-contents",
+    
+    "relUrl": "/docs/crm/0_someexp.html#index-of-contents"
+  },"2": {
+    "doc": "CRM - customer relationship managment",
+    "title": "The Motivation",
+    "content": "So… currently I have a job in which I’m working as a fullstack developer in the .NET Framework - JQuery stack. yeah, pretty cringeworthy I may rant about that later. ",
+    "url": "/docs/crm/0_someexp.html#the-motivation",
+    
+    "relUrl": "/docs/crm/0_someexp.html#the-motivation"
+  },"3": {
+    "doc": "CRM - customer relationship managment",
+    "title": "CRM - customer relationship managment",
+    "content": "Last Modified: 2023-Oct-11 . ",
+    "url": "/docs/crm/0_someexp.html",
+    
+    "relUrl": "/docs/crm/0_someexp.html"
+  },"4": {
+    "doc": "chatbot",
+    "title": "Building a chatbot",
+    "content": " ",
+    "url": "/docs/chatbot/chatbot.html#building-a-chatbot",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#building-a-chatbot"
+  },"5": {
+    "doc": "chatbot",
+    "title": "Index of Contents",
+    "content": ". | OpenAI | Local IA . | PoC architecture | Conclusions: | . | Thanks to LMSYS.ORG for making these kind of stuff https://lmsys.org/blog/2023-03-30-vicuna/ . | Links of interest | . | . ",
+    "url": "/docs/chatbot/chatbot.html#index-of-contents",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#index-of-contents"
+  },"6": {
+    "doc": "chatbot",
+    "title": "OpenAI",
+    "content": "OpenAI offers a handful of utilities for chatbots For example, we could fed it our data from my tfg’s site then ask for conclusions about the data, even examples. Amazing response, indeed. As long as it’s public data, there shouldn’t be any concern, althought its api rate limits and costs might be too high. ",
+    "url": "/docs/chatbot/chatbot.html#openai",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#openai"
+  },"7": {
+    "doc": "chatbot",
+    "title": "Local IA",
+    "content": "Using Llama.cpp, the same process can be done. There are simple models such as those of 3 or 7billions of parameters, which are good enough for fantasy😟 or social chats. These models, like vicuna, were trained with chagpt responses shared by users, that is the reason why these kinds of conversations are quite good for such tiny models. Apparently the 65B model is much better, I did not test it.(potato laptop) . Chatgpt’s behaviour can be emulated with an scenario This is a transcript, at the start of the completion prompt (which can be added silently). #To chatgpt's api, you send the conversation (role: assistant is what the model responds) {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"Who won the world series in 2020?\"}, {\"role\": \"assistant\", \"content\": \"The Los Angeles Dodgers won the World Series in 2020.\"}, {\"role\": \"user\", \"content\": \"Where was it played?\"} #To the /completion api of llama.cpp's server, you give the number of characters you want it # to predict and the stop strings {\"prompt\":\"Transcript of a dialog where user interacts with an Assistant, named isalt.\\nuser:\", \"n_predict\":500, \"stop\":[\"isalt:\",\"user:\"]} . For the good looking effect of inserting sequentially the tokens,stream can be set to true, in both the gpt’s api and llama.ccp’s. Which opens a connection that returns a token per line (\\n), between empty lines. {\"prompt\":\"Transcript of a dialog where user interacts with an Assistant, named isalt.\\nuser:\", \"n_predict\":500, \"stop\":[\"isalt:\",\"user:\"], \"stream\":true} &gt; {data:\"Hi\",...} &gt; &gt; {data:\"I'm\",...} &gt; &gt; {data:\"an\",...} &gt; . This behaviour is abstracted if you use a library like llamasharp or python’s openai package . ",
+    "url": "/docs/chatbot/chatbot.html#local-ia",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#local-ia"
+  },"8": {
+    "doc": "chatbot",
+    "title": "PoC architecture",
+    "content": "I’ve implemented a proof of concept with an asp backend. ",
+    "url": "/docs/chatbot/chatbot.html#poc-architecture",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#poc-architecture"
+  },"9": {
+    "doc": "chatbot",
+    "title": "Conclusions:",
+    "content": ". | Using a very efficient 7b parameters model, tasks like redacting an email, interacting with a fantasy characters, etc. Give very chatgpt like results in tens of seconds. | I didn’t have success with long prompts, tried replicating the website comprehension, but the model spewed nonsense, even reducing the size did not give results. Prompt engineering ftw? | I need to research more about the parameters(frequency_penalty, top_k,etc) and to find more models 😀 gotta catch ‘em all. | . ",
+    "url": "/docs/chatbot/chatbot.html#conclusions",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#conclusions"
+  },"10": {
+    "doc": "chatbot",
+    "title": "Thanks to LMSYS.ORG for making these kind of stuff https://lmsys.org/blog/2023-03-30-vicuna/",
+    "content": " ",
+    "url": "/docs/chatbot/chatbot.html#thanks-to-lmsysorg-for-making-these-kind-of-stuff-httpslmsysorgblog2023-03-30-vicuna",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#thanks-to-lmsysorg-for-making-these-kind-of-stuff-httpslmsysorgblog2023-03-30-vicuna"
+  },"11": {
+    "doc": "chatbot",
+    "title": "Links of interest",
+    "content": ". | https://vllm.ai/ | Uncensored vicuna | . ",
+    "url": "/docs/chatbot/chatbot.html#links-of-interest",
+    
+    "relUrl": "/docs/chatbot/chatbot.html#links-of-interest"
+  },"12": {
+    "doc": "chatbot",
+    "title": "chatbot",
+    "content": "Last Modified: 2023-Jul-19 . ",
+    "url": "/docs/chatbot/chatbot.html",
+    
+    "relUrl": "/docs/chatbot/chatbot.html"
+  },"13": {
+    "doc": "Conclusions",
+    "title": "Índice",
+    "content": ". | Conclusions | . ",
+    "url": "/docs/tfg/conclusions.html#%C3%ADndice",
+    
+    "relUrl": "/docs/tfg/conclusions.html#índice"
+  },"14": {
+    "doc": "Conclusions",
+    "title": "Conclusions",
+    "content": "| distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | Bandwith | . | 0 &lt; 1km | 1178 | 95.02 | 1.01 | 1.15 | 26.19 | 3.66 | 386.61 | 1.33 | . | 1 km &lt;= 2km | 1766 | 86.21 | 0.92 | 1.24 | 10.95 | 2.26 | 54.30 | 1.23 | . | 2 km &lt;= 3km | 1270 | 77.43 | 0.83 | 1.36 | 8.90 | 1.31 | 66.31 | 1.19 | . | 3 km &lt;= 5km | 2061 | 68.35 | 0.74 | 1.46 | 7.55 | 1.17 | 80.62 | 1.10 | . | 5 km &lt;= 10km | 2595 | 60.47 | 0.67 | 1.60 | 3.99 | 1.22 | 52.98 | 1.07 | . | 10 km &lt;= 15km | 1083 | 54.83 | 0.60 | 1.62 | 3.75 | 1.58 | 86.20 | 0.94 | . | 15km or more | 899 | 50.09 | 0.53 | 1.39 | 2.57 | 1.91 | 40.59 | 0.71 | . My motivation for optimizing cell usage is that the less cells we are going to use throughout our journey, the more resources the system will have available for new riders. We obtain the next results: . | We have implemented a way use a 2 layer routing algorithm, I hypothesize that this is the path with less number of jumps between cells | The travelled distance decreases (Highways increase the distance but reduce the time) | Using highways increases the number of cells involved in the journey. | Right now, | Just seeing the bandwith columns, we can conclude that in short commutes it doesn’t make sense, and even in longer ones, a 40% avg increase of travel time is ridiculously high. The cost between the second layer (base stations) nodes is 1. Playing with this weight, for example, making it a function of the average speed of the roads underneath, we would optimize for faster speeds but higher number of jumps between stations. | . What the future holds: . | Test with no Voronoi areas of coverage. | Find a metric for resources usage, maybe this needs first a way to simulate cars. Queu theory. | Modifying weights in the base station graph | Simulate cars (auto completing paths, per unit of time), poisson probability of cars starting journey. | Mix Voronoi area coverages and sphere of influences with a ranged distance, for highly urban areas and remote areas, respectively | . ",
+    "url": "/docs/tfg/conclusions.html#conclusions",
+    
+    "relUrl": "/docs/tfg/conclusions.html#conclusions"
+  },"15": {
+    "doc": "Conclusions",
+    "title": "Conclusions",
+    "content": "Last Modified: 2023-Jun-29 . Remember to right click-&gt;\"open image in new tab\" for small images . ",
+    "url": "/docs/tfg/conclusions.html",
+    
+    "relUrl": "/docs/tfg/conclusions.html"
+  },"16": {
+    "doc": "A simple project?",
+    "title": "1)  Introduction",
+    "content": "Cringe motivation . The language of choice is C, because I want to try the new c23’s features, also, using OPENGL because I already know some and how much Raylib eases the development. The main motivation, little rant, I’ve started a new position as a C# backend developer, which is not boring by itself, but having started in the junior dev role with it’s corespondent low wadge makes me unmotivated to share the improvements I’ve made upon some main data pipelines. It’s kind of a bummer, but I’m not going to give up on my dreams, so I’m going to start a new project, a simple one, to keep me motivated and to keep me learning. I might make some entries about EF/C# optimizations, gotta make having read the language specification useful😀. ",
+    "url": "/docs/DroneWorld/droneworld.html#1--introduction",
+    
+    "relUrl": "/docs/DroneWorld/droneworld.html#1--introduction"
+  },"17": {
+    "doc": "A simple project?",
+    "title": "2) First iteration",
+    "content": ". Nice and simple, let’s code… AAnd this is too abstracted, the main problems is what data should the opengl thread have. On this first iteration, I converted the json of the ways and nodes returned by the query into 2D paths. struct node { u64 id; double lat; double lon; }; struct way { u64 id; i64 nodesCount; struct node *nodes; }; struct elements { struct node *nodes; struct way *ways; u64 nodesCount; u64 waysCount; }; . Then turn the 2D paths into rectangles as they are roads, which are rect with some angles and curves.😥 For now in the cpu, but I think I can bake something in the geometry shader. | Path to road | . If we only have into consideration the next point, once the path angles a bit, there will be some weird effects, without making it too complicated or complex, making only 2 road points per path point should be enough. | Data structure for managing the road: For now I’m just using arrays, yep…. 10k start to hit 5 seconds | . ",
+    "url": "/docs/DroneWorld/droneworld.html#2-first-iteration",
+    
+    "relUrl": "/docs/DroneWorld/droneworld.html#2-first-iteration"
+  },"18": {
+    "doc": "A simple project?",
+    "title": "A simple project?",
+    "content": "Last Modified: 2024-Feb-20 . ",
+    "url": "/docs/DroneWorld/droneworld.html",
+    
+    "relUrl": "/docs/DroneWorld/droneworld.html"
+  },"19": {
+    "doc": "open ai's gpt",
+    "title": "Some examples of chatgpt’s use cases (ignore this page XD)",
+    "content": " ",
+    "url": "/docs/chatbot/gpt4.html#some-examples-of-chatgpts-use-cases-ignore-this-page-xd",
+    
+    "relUrl": "/docs/chatbot/gpt4.html#some-examples-of-chatgpts-use-cases-ignore-this-page-xd"
+  },"20": {
+    "doc": "open ai's gpt",
+    "title": "Example of a virtual presence",
+    "content": "Could be nice if you could copy-paste your cv and it would answer accordingly to an interviewer. The initial {role:\"system\",content:\"...\"} was a description of a fictional person’s virtual avatar, and a description of the working experience of that person also a contact info in case gpt3.5 wouldn’t know the answer. ",
+    "url": "/docs/chatbot/gpt4.html#example-of-a-virtual-presence",
+    
+    "relUrl": "/docs/chatbot/gpt4.html#example-of-a-virtual-presence"
+  },"21": {
+    "doc": "open ai's gpt",
+    "title": "Summarising sites",
+    "content": "I will just copy-paste the markdown page inside gpt’s webpage. As the example is about to show, correct examples from the theme explained in the site, can be inferred. ",
+    "url": "/docs/chatbot/gpt4.html#summarising-sites",
+    
+    "relUrl": "/docs/chatbot/gpt4.html#summarising-sites"
+  },"22": {
+    "doc": "open ai's gpt",
+    "title": "Youtube guidelines",
+    "content": "Once fed the Youtube terms, questions can be asked referring to particular topics, even not included in the text . ",
+    "url": "/docs/chatbot/gpt4.html#youtube-guidelines",
+    
+    "relUrl": "/docs/chatbot/gpt4.html#youtube-guidelines"
+  },"23": {
+    "doc": "open ai's gpt",
+    "title": "open ai's gpt",
+    "content": "Last Modified: 2023-Jul-19 . ",
+    "url": "/docs/chatbot/gpt4.html",
+    
+    "relUrl": "/docs/chatbot/gpt4.html"
+  },"24": {
+    "doc": "Home",
+    "title": "😉",
+    "content": "Feel free to check the entries on the left . ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"25": {
+    "doc": "Home",
+    "title": "Contact",
+    "content": ". ",
+    "url": "/#contact",
+    
+    "relUrl": "/#contact"
+  },"26": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"27": {
+    "doc": "Roadmap",
+    "title": "Índice",
+    "content": ". | Wed May 3 04:04:51 PM CEST 2023 | The cell graph . | Shortest path | Steps to solve the shortest path . | Point to Line Algorithm | . | Modifying the requirement . | Shortest path withing allowed roads | . | . | A better algorithm | Future solutions: | Semi-conclusion . | Voronoi - A better way to define a cell’s network and range | . | . Wed May 3 04:04:51 PM CEST 2023 . ",
+    "url": "/docs/tfg/roadmap.html#%C3%ADndice",
+    
+    "relUrl": "/docs/tfg/roadmap.html#índice"
+  },"28": {
+    "doc": "Roadmap",
+    "title": "The cell graph",
+    "content": "Introduction. In order to simulate the cell network, we need realistic data of base stations’ positions. The closer we have: . Data from opencellID integrated. There’s a range field, but it’s 1km in most of the samples, which results in cells being at one jump from each other. Using sphere of influence algorithm : . But still, there are some islands, I will apply the same sphere of influence, but with the second closer node as a range d6918b8 . A better graph is obtained, at first glance, no isolated graphs. Just in case, I will search for them dd6bf45. &gt; python main.py ... No Unreachable nodes in base station graph ... Sun May 7 05:21:53 PM CEST 2023 . Shortest path . The sphere of influence algorithm doesn’t guarantee that all of the map will be covered by the ranges of each node. TODO - better way to make the graph . Steps to solve the shortest path . | Choose the origin and end nodes Done | Find the closest base station to each node Done | BSpath(in transparent yellow) - Find shortest distance in the base station graph, Done 7661ee4 This way, we minimize the number of cells required, in the real life scenario, each cell will have a limited number of clients with the requirements needed for a remote drive. Hence, the less cells required, the more hypothetical cars/travels will be able to drive/perform at the same time . cShPath=nx.dijkstra_path(Gt,bSStart,bSEnd) #weights = 1 . Telefonica, orange and vodafone. From left to right . | Add a field to each road, ¿¿distance to the closer base station in the shortest BSpath ??. Discard roads outside of each base station’s range TODO | Calculate the shortest road route with the updated weights, TODO Point to Line Algorithm . As in the image below, I will get the distance for 5 points per edge and discard the way if the point is outside of any cell’s range . Because the range was defined when the sphere of influence was applied, if there are cells very close to each other, the range will be defined very short, hence, a voronoi-like distance, not overriding the range, instead of sphere of influence will be used in another example . | . Mon May 8 08:22:52 AM CEST 2023 . The requirement in points to line algorithm is too restrictive, as can be seen, a path from origin to end in the road graph can’t be found, this isn’t neccesarily bad. We would just need to calculate another path within the cell’s network. f74f1b8 . Modifying the requirement . 08d9f71 . Before adding an algorithm to find another cell network, I will modify the requirement soi. A way is acceptable, if any point within a road is inside the cell’s range . Shortest path withing allowed roads . From the initial steps and the modified condition, the initial and final road nodes will be inside the allowed roads. This should be straight forward, it isn’t . Other examples of random routes, one of them disproves that the starting node will necessarily be covered by a cell area: As a reminder, these problems have their origin in the SOI algorithm . Sooner or later this would appear, there’s a gap in the coverage of the cells therefore a better algorithm is needed. ",
+    "url": "/docs/tfg/roadmap.html#the-cell-graph",
+    
+    "relUrl": "/docs/tfg/roadmap.html#the-cell-graph"
+  },"29": {
+    "doc": "Roadmap",
+    "title": "A better algorithm",
+    "content": "As seen in the data, most cells are close to roads, it’s very likely that the gap in the coverage between two cells will be 1 or 2 cells away from being circumvented, it doesnt make much sense to perform the shortest path between the origin and end cells. shortest_cell_route=[ cell0, cell1, cell2, cell3, cell4] ... move_inRoad_from_to(cell0,cell4) ... //Can't move from cell1 to cell2 through the roads remove_edge_between(cell1,cell2) new_route=find_shortest_route_between(cell1,cell2)// or just find a new route shortest_cell_route=[cell0,cell1,cell5,cell7, cell2, cell3, cell4] ... Wed May 10 10:26:42 PM CEST 2023 . 5797efa . Gif with the sequence of steps, it’s 26MB, this page is big enough 😼. | This approach doesn’t work that well.find_shortest_route_between doesn’t prove there’s a road path from where the car leaves cell0, joins and leaves cell1 and can join cell2. For that we would need to find the shortest route from some node of cell0 and some node of cell2, then cell3… until the last node . | Anyway, I will just find the shortest path between cel0 and cell4, instead of just the two cells unreachable cells. Now there’s another problem, yes, we know whether the starting node can reach the ending one, but we can’t pinpoint which pair of cells have unreachable nodes. | . Merging both solutions: 3b887d3 . | Example A of route solving . | Example B of no route solving, the end node is in another road. But because there’s a path between two random points of the last and second last, but not exactly from the source to the end. Will add the points in the labels of the pictures, for replicating these errors . Other random starting and end nodes . | Example C, another ok result . | Weird result: . | Iteration_1 Iteration_2 Iteration_3 Iteration_4 | Iteration_5 Iteration_6 Iteration_7 Iteration_8 | Iteration_9 Iteration_10 Iteration_11 Iteration_12 | . | Increasing every cell’s range data0['range']=min1*2 if min1 &lt; 50 else min1*1.3. ",
+    "url": "/docs/tfg/roadmap.html#a-better-algorithm",
+    
+    "relUrl": "/docs/tfg/roadmap.html#a-better-algorithm"
+  },"30": {
+    "doc": "Roadmap",
+    "title": "Future solutions:",
+    "content": "| Discard roads with no cell coverage | Find shortest road path (Ignoring cells) | Check for cells within the path. | Repeat first step until the target is reached | Choose the closer cells to each road as the cell graph | . ",
+    "url": "/docs/tfg/roadmap.html#future-solutions",
+    
+    "relUrl": "/docs/tfg/roadmap.html#future-solutions"
+  },"31": {
+    "doc": "Roadmap",
+    "title": "Semi-conclusion",
+    "content": ". | Conclusion from the algorithm: Once the entire map is covered, it’s slower trying to find a road path which fits the cell path than what we are doing, finding a cell path which contains a valid route. Hence, there’s an innherent trade off between shortest path in road (minimum distance or time) and cell’s required per travel. | Conclusion from the data: . | It’s not realistic using SOI because it sets a circular range with tons of holes, which is rare in a high concentration of base stations, where this high number(cells/sqmeter) is due to the ammount of people/robustness to failure. | We have to ignore the range of each cell, reported by opencellid | It’s reasonable to think that in a city, every place is in coverage of at least 1 cells. | . | . ",
+    "url": "/docs/tfg/roadmap.html#semi-conclusion",
+    
+    "relUrl": "/docs/tfg/roadmap.html#semi-conclusion"
+  },"32": {
+    "doc": "Roadmap",
+    "title": "Voronoi - A better way to define a cell’s network and range",
+    "content": "Using Voronoi . ",
+    "url": "/docs/tfg/roadmap.html#voronoi---a-better-way-to-define-a-cells-network-and-range",
+    
+    "relUrl": "/docs/tfg/roadmap.html#voronoi---a-better-way-to-define-a-cells-network-and-range"
+  },"33": {
+    "doc": "Roadmap",
+    "title": "Roadmap",
+    "content": "Last Modified: 2023-Jun-29 . Remember to right click-&gt;\"open image in new tab\" for small images . ",
+    "url": "/docs/tfg/roadmap.html",
+    
+    "relUrl": "/docs/tfg/roadmap.html"
+  },"34": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "Índice",
+    "content": ". | Voronoi representation . | Considerations | . | Ok, looks cool what about the Algorithm . | The path solving would be performed like this | . | How different is the new algorithm? | . ",
+    "url": "/docs/tfg/roadmap_2.html#%C3%ADndice",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html#índice"
+  },"35": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "Voronoi representation",
+    "content": "From the previous work, I conclude the algorithm for path solving was highly dependant on the cells graph. We need to connect each cell with all the of neighbouring cells, as with the sphere of influence moving throughout this cell graph is seen as us moving farther from the first cell and closer to the second one. The Voronoi representation allows us to make a graph where each cell has an edge to each neighbouring cell. See image below, edges in gray, cells (red dots). On the left, the voronoi regions(in blue) and their cells (red dots), on the right, in transparent gray the resulting graph’s edges . Many works also use Voronoi for modelling this kind of networks . ",
+    "url": "/docs/tfg/roadmap_2.html#voronoi-representation",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html#voronoi-representation"
+  },"36": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "Considerations",
+    "content": ". | 👍 I’m using plain Voronoi, not having into consideration the cell’s power, range field in opencellid database (unreliable field) | 👍 Being inside a region of a cell means that most likely your phone will be connected to that tower cell | 👎 Voronoi regions cover all of the map, there’s not any spot with no coverage, not true for remote places | 👍👍👍👍👍👍👍 It looks good | . Inside each V. region, the perimeter in meters and area in (area [m^2])/1000, and width of the ways by their kind (thicker primary,thinnest dirt ones) . ",
+    "url": "/docs/tfg/roadmap_2.html#considerations",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html#considerations"
+  },"37": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "Ok, looks cool what about the Algorithm",
+    "content": "At first glance, using the same algorithm as before shortest path in cell graph gives us the same kind of problems as it did before. | It seems pointless to check the roads inside a cell’s range more than one time, roads don’t move. | The shortest path in the cell’s graph has zero value, we might as well pick a path with S shape and try to find a valid road path which satisfies reachability The shortest path in the cell’s graph would make sense if the landscape of the town was a grid or we have the guarantee a neighbouring cell has a road path which connects the roads under their coverage. | . On the left, Manhattan, every road under every cell is reachable, on the right, Fuente de Fresno, Madrid, on which I will explain the new algorithm. Using the old algorithm is just too slow, the cell’s graph give little information about how we can move from one cell to another by road. Addressing both concerns, I came with this solution . A voronoi region A contains 1 or more unreachable roads, each set of roads A1, A2, A3, A4 is connected or not to a neighbouring cell’s set of roads A1 - C1, A2 - C2, A3 - C2, , A4, C3. Hence, we can define a graph which only contains these sets of roads with the property that if the node Xi can reach Xj, hence, every road point from Xi can reach Xj. ",
+    "url": "/docs/tfg/roadmap_2.html#ok-looks-cool-what-about-the-algorithm",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html#ok-looks-cool-what-about-the-algorithm"
+  },"38": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "The path solving would be performed like this",
+    "content": "For example, see P1 and P2. They are under the same cell: A, with the old algorithm we would end the search in the cell’s graph because the closer base station to P1 is the same as P2. Using this new algorithm: . | From P1 we get the set of roads which contains it -&gt; A3 | From P2 we get the set of roads which contains it -&gt; A4 . | We obtain a path between A3 and A4. i.e.(Using A*) A3,C2,D2,C3,A4 . | We join the set of roads and perform the searching algorithm (i.e. A*) and we obtain the shortest path in road, painted in green. | . In step 3, using a shortest path solving we are guaranteeing that the resuling path uses the less ammount of jumps between cells, this is not guaranteed if we solve the shortest path only having into consideration the road network. ",
+    "url": "/docs/tfg/roadmap_2.html#the-path-solving-would-be-performed-like-this",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html#the-path-solving-would-be-performed-like-this"
+  },"39": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "How different is the new algorithm?",
+    "content": "Because this algorithms seeks for the less ammount of jumps between cells. We have to compare what’s the tradeoff against the shortest path by road (ignoring cells). Simulating shortest path for two random points: . | distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | CellSeconds | . | 0 &lt; 1km | 1178 | 95.02 | 1.01 | 1.15 | 26.19 | 3.66 | 386.61 | 1.33 | . | 1 km &lt;= 2km | 1766 | 86.21 | 0.92 | 1.24 | 10.95 | 2.26 | 54.30 | 1.23 | . | 2 km &lt;= 3km | 1270 | 77.43 | 0.83 | 1.36 | 8.90 | 1.31 | 66.31 | 1.19 | . | 3 km &lt;= 5km | 2061 | 68.35 | 0.74 | 1.46 | 7.55 | 1.17 | 80.62 | 1.10 | . | 5 km &lt;= 10km | 2595 | 60.47 | 0.67 | 1.60 | 3.99 | 1.22 | 52.98 | 1.07 | . | 10 km &lt;= 15km | 1083 | 54.83 | 0.60 | 1.62 | 3.75 | 1.58 | 86.20 | 0.94 | . | 15km or more | 899 | 50.09 | 0.53 | 1.39 | 2.57 | 1.91 | 40.59 | 0.71 | . Fields: The stats New/Old are the division between results with this algorithm and A* _Although in the pictures there’s a label Dijkstra, it’s A* . | Distances: Distance of the path A* between points P1 and P2 | nsamples: Number of samples per distance range | Cell Hops: Times the path changes from one cell to another (i.e. A1,A2,A1,A3,A2 → 4 hops) | Cells Used: Unique set of Cell Hops (i.e. A1,A2,A3 → 3 cells used) | Travel Time: Total travel time of the path | max TT: maximum travel time, “worst case” | Time of Compute: Time needed for finding the shortest path: . | Old: Only A* into consideration | New: Time needed for the path in the cell graph and the in the subset road graph | . | CellSeconds: Metric inspired on the energy unit [KWh]: (NewCellsUsed*NewTravelTime)/(OldCellsUsed*OldTravelTime) i.e. 4 cells for 300 seconds = 1200 Cs ⇔ 16 cells for 75 seconds = 1200 Cs Few example of zones: | Madrid Hortaleza SanBlas Tetuan : | . | distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | CellSeconds | . | 0 &lt; 1km | 25 | 93.14 | 0.99 | 1.50 | 9.36 | 6.68 | 112.58 | 1.55 | . | 1 km &lt;= 2km | 97 | 92.45 | 0.99 | 1.66 | 10.95 | 2.49 | 38.65 | 2.54 | . | 2 km &lt;= 3km | 128 | 79.58 | 0.85 | 1.57 | 8.11 | 1.10 | 14.28 | 1.49 | . | 3 km &lt;= 5km | 386 | 68.57 | 0.75 | 1.61 | 7.55 | 1.02 | 16.09 | 1.29 | . | 5 km &lt;= 10km | 1034 | 56.71 | 0.64 | 1.71 | 3.69 | 1.06 | 11.25 | 1.10 | . | 10 km &lt;= 15km | 433 | 49.14 | 0.56 | 1.77 | 3.04 | 1.52 | 4.54 | 1.01 | . | 15km or more | 33 | 46.01 | 0.54 | 1.86 | 2.46 | 2.13 | 4.61 | 1.01 | . | Madrid Centro: | . | distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | CellSeconds | . | 0 &lt; 1km | 84 | 91.43 | 1.02 | 1.52 | 26.19 | 6.65 | 386.61 | 3.85 | . | 1 km &lt;= 2km | 210 | 82.64 | 0.89 | 1.65 | 9.58 | 1.66 | 54.30 | 1.73 | . | 2 km &lt;= 3km | 331 | 77.52 | 0.85 | 1.65 | 8.90 | 1.23 | 66.31 | 1.57 | . | 3 km &lt;= 5km | 762 | 65.40 | 0.72 | 1.58 | 5.83 | 1.11 | 41.10 | 1.17 | . | 5 km &lt;= 10km | 878 | 58.66 | 0.66 | 1.65 | 3.02 | 1.27 | 32.34 | 1.11 | . | 10 km &lt;= 15km | 22 | 50.87 | 0.57 | 1.56 | 2.03 | 1.47 | 3.24 | 0.96 | . | Alcobendas: | . | distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | CellSeconds | . | 0 &lt; 1km | 164 | 90.97 | 0.94 | 1.10 | 2.22 | 3.26 | 39.94 | 1.01 | . | 1 km &lt;= 2km | 447 | 82.88 | 0.87 | 1.20 | 7.24 | 1.75 | 44.99 | 1.05 | . | 2 km &lt;= 3km | 604 | 76.30 | 0.80 | 1.24 | 2.67 | 1.08 | 8.66 | 0.99 | . | 3 km &lt;= 5km | 719 | 69.71 | 0.74 | 1.29 | 3.73 | 1.29 | 80.62 | 0.95 | . | 5 km &lt;= 10km | 220 | 59.73 | 0.64 | 1.31 | 2.25 | 1.45 | 7.31 | 0.83 | . | Alcobendas Small: | . | distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | CellSeconds | . | 0 &lt; 1km | 887 | 96.33 | 1.02 | 1.11 | 5.07 | 3.38 | 60.09 | 1.15 | . | 1 km &lt;= 2km | 951 | 87.60 | 0.94 | 1.12 | 2.93 | 2.64 | 51.18 | 1.07 | . | 2 km &lt;= 3km | 132 | 78.12 | 0.86 | 1.08 | 1.57 | 2.76 | 12.46 | 0.95 | . | 3 km &lt;= 5km | 7 | 76.47 | 0.84 | 0.94 | 1.12 | 2.68 | 3.39 | 0.89 | . | Alcobendas TresCantos FuentedelFresno: | . | distances | nsamples | Cell Hops New/Old [%] | Cells Used New/Old | Travel Time New/Old | max TT New/Old | Time of Compute New/Old | max ToC New/Old | CellSeconds | . | 0 &lt; 1km | 18 | 86.67 | 0.93 | 1.16 | 1.98 | 3.12 | 8.69 | 1.06 | . | 1 km &lt;= 2km | 61 | 91.43 | 0.96 | 1.15 | 3.58 | 1.73 | 13.17 | 1.14 | . | 2 km &lt;= 3km | 75 | 81.24 | 0.87 | 1.25 | 2.88 | 1.19 | 8.09 | 1.10 | . | 3 km &lt;= 5km | 187 | 74.38 | 0.79 | 1.31 | 4.10 | 1.21 | 8.71 | 1.03 | . | 5 km &lt;= 10km | 463 | 72.67 | 0.77 | 1.41 | 3.99 | 1.37 | 52.98 | 1.07 | . | 10 km &lt;= 15km | 628 | 58.90 | 0.62 | 1.51 | 3.75 | 1.63 | 86.20 | 0.90 | . | 15km or more | 866 | 50.25 | 0.53 | 1.37 | 2.57 | 1.90 | 40.59 | 0.70 | . As a remainder: In the previous image, the travel distance is greater in the Less cells case but the travel time is smaller. That’s because for the road’s speed I’ve used uber movement data . ",
+    "url": "/docs/tfg/roadmap_2.html#how-different-is-the-new-algorithm",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html#how-different-is-the-new-algorithm"
+  },"40": {
+    "doc": "Roadmap_2-Voronoi_Cells",
+    "title": "Roadmap_2-Voronoi_Cells",
+    "content": "Last Modified: 2023-Jun-29 . Remember to right click-&gt;\"open image in new tab\" for small images . ",
+    "url": "/docs/tfg/roadmap_2.html",
+    
+    "relUrl": "/docs/tfg/roadmap_2.html"
+  },"41": {
+    "doc": "routing",
+    "title": "Routing system",
+    "content": " ",
+    "url": "/docs/routing/routing.html#routing-system",
+    
+    "relUrl": "/docs/routing/routing.html#routing-system"
+  },"42": {
+    "doc": "routing",
+    "title": "Index of Contents",
+    "content": ". | Intro | . ",
+    "url": "/docs/routing/routing.html#index-of-contents",
+    
+    "relUrl": "/docs/routing/routing.html#index-of-contents"
+  },"43": {
+    "doc": "routing",
+    "title": "Intro",
+    "content": "I was thinking about my thesis and that it wasn’t quite functional, which in itself shouldn’t be an issue, but it’s nature is to be interactive as any path finding/routing system is (google maps, age of empires, cities skylines, roller coaster tycoon). Hosted here, very beta 4 now. ",
+    "url": "/docs/routing/routing.html#intro",
+    
+    "relUrl": "/docs/routing/routing.html#intro"
+  },"44": {
+    "doc": "routing",
+    "title": "routing",
+    "content": "Last Modified: 2023-Aug-03 . ",
+    "url": "/docs/routing/routing.html",
+    
+    "relUrl": "/docs/routing/routing.html"
+  },"45": {
+    "doc": "routing roadmap",
+    "title": "Índice",
+    "content": ". | Week1 - 2023-Jul-21 - The choice | Week2 - 2023-Jul-31 - Learning React . | 2023-Aug-02 | 2023-Aug-03 | 2023-Aug-07 | 2023-Aug-14 | . | . ",
+    "url": "/docs/routing/routing_roadmap.html#%C3%ADndice",
+    
+    "relUrl": "/docs/routing/routing_roadmap.html#índice"
+  },"46": {
+    "doc": "routing roadmap",
+    "title": "Week1 - 2023-Jul-21 - The choice",
+    "content": "My mvp should look as follows: . Should I apply any front framework now? Will it bite me after if i don’t? I like minimalism, on the other hand, it’s important to know tools with high hireability. The most popular frameworks are react, angular, vue, svelte, jquery, semantic-ui, backbone.js. Applying my little script on infojobs . &gt;./search_jobs.sh react angular vue svelte jquery semantic-ui backbone.js Infojobs react:616 vs angular:421 vs vue:98 vs svelte:1 vs jquery:119 vs semantic-ui:80 vs backbone.js:194 Indeed react:1.360 vs angular:2.534 vs vue:558 vs svelte:11 vs jquery:464 vs semantic-ui: vs backbone.js:2 . ",
+    "url": "/docs/routing/routing_roadmap.html#week1---2023-jul-21---the-choice",
+    
+    "relUrl": "/docs/routing/routing_roadmap.html#week1---2023-jul-21---the-choice"
+  },"47": {
+    "doc": "routing roadmap",
+    "title": "Week2 - 2023-Jul-31 - Learning React",
+    "content": "I decided for React, at the same time using next.js. ditching asp?, maybe . The page is hosted here, made with AWS Amplify because why not, it was quite easy to add a CNAME record to my current registrar. 2023-Aug-02 . I think I came up with the final behaviour, it should be as follows: . | Add base station (at the center of the map) | click to enable movement, can be dragged | click to show the range (which can be modified moving the mouse), | click to go back to step a | . This way, the main react component only stores and array of {position:(lat,lon), radius:(meters)} and represents them as &lt;Marker ..., &lt;Draggable Marker or &lt;CircleMarker.... depending on the “mode” based on the click number? . 2023-Aug-03 . | Modified the behaviour, click and being able to move it quite better | Persistent data storage | A list of the positions and ranges is printed at the bottom | 150kB on first load… bruh | . &gt; npm run build ... Route (app) Size First Load JS ┌ ○ / 79.6 kB 164 kB └ ○ /favicon.ico 0 B 0 B + First Load JS shared by all 84.6 kB . 2023-Aug-07 . Before bed, I wanted to, at least, fetch a base station, ended up learning how useEffect worked. But slept late. At first, I wanted to toggle between marker, area and roads, but having the roads all of the time looks cool. In case i forget, I have to modify this ( count % 3 ) . 2023-Aug-14 . Before doing the routing (data processing), I rather fix the data. In this case, croping the roads of each bs. For this, I should split the road data per base station, I was planning to add a tag per filter, i.e. using the overpass function convert . ",
+    "url": "/docs/routing/routing_roadmap.html#week2---2023-jul-31---learning-react",
+    
+    "relUrl": "/docs/routing/routing_roadmap.html#week2---2023-jul-31---learning-react"
+  },"48": {
+    "doc": "routing roadmap",
+    "title": "routing roadmap",
+    "content": "Under construction 🏗️ . ",
+    "url": "/docs/routing/routing_roadmap.html",
+    
+    "relUrl": "/docs/routing/routing_roadmap.html"
+  },"49": {
+    "doc": "TFG",
+    "title": "INTRO Roadmap",
+    "content": " ",
+    "url": "/docs/tfg/tfg.html#intro-roadmap",
+    
+    "relUrl": "/docs/tfg/tfg.html#intro-roadmap"
+  },"50": {
+    "doc": "TFG",
+    "title": "Índice",
+    "content": ". | Objective | Steps . | Roads . | Example of filtered data and non filtered data | Characterizing roads’ congestion | . | Graph representation . | Joining uber and osm data | Some representations | . | Cell network (next page) | . | . ",
+    "url": "/docs/tfg/tfg.html#%C3%ADndice",
+    
+    "relUrl": "/docs/tfg/tfg.html#índice"
+  },"51": {
+    "doc": "TFG",
+    "title": "Objective",
+    "content": "To Develop a Python environment, based on the NetworkX library, in order to study route planning algorithms in a scenario of remote driving with real environments. The overall goal is to minimize the number of cells required to perform a remote drive, in order to maximize the number of hypothetical cars/travels that can be performed at the same time. The main milestones are: . | Roads: Obtain realistic road data . | Speed data | . | Graph representation: of the roads | Base Stations: Obtain realistic data of base stations’ positions] | Create a graph of base stations | Find the shortest path between two base stations | Implement a 2 layer routing algorithm | Analyze the results | . ",
+    "url": "/docs/tfg/tfg.html#objective",
+    
+    "relUrl": "/docs/tfg/tfg.html#objective"
+  },"52": {
+    "doc": "TFG",
+    "title": "Steps",
+    "content": " ",
+    "url": "/docs/tfg/tfg.html#steps",
+    
+    "relUrl": "/docs/tfg/tfg.html#steps"
+  },"53": {
+    "doc": "TFG",
+    "title": "Roads",
+    "content": "Using Overpass, OSM’s API, we can obtain data of the roads in a certain area, for example, the center of Madrid. Overpass’s queries have their own language (Overpass QL) somewhat like SQL, but for interacting with OSM’s API. This can be easily learned by using the Overpass Turbo web interface and following the ldodds’ tutorial. As a summary, some of the main objects in the query are way and node, which are the main objects to define roads and intersections, respectively. Defining a bounding box bbox or a center and radious around, we can obtain the data of the roads in that area. Further filtering can be accomplished by using tags, due to the fact that the data is user generated, the quality of the data can vary, hence roads with similar characteristics can differ in the tags they have. Luckily I some tags from Project-OSRM and added another tags that appear in the roads I was interested in. Example of filtered data and non filtered data . Note: There are tags like direction, lanes, maxspeed, name, oneway, surface, width and many more. Characterizing roads’ congestion . From UberMovement we can obtain data of the roads’ congestion, understood as the average speed of the cars that pass through that road. This data lists roads’s average speed per hour, per day, per month, per year. Although not every road has data for every hour, it’s still a good approximation of the road’s congestion. | Field | Description | . | year | - | . | month | - | . | day | - | . | hour | - | . | osm_way_id | UID of the road section (way) in OSM | . | osm_start_node_id | UID of the start node of the way | . | osm_end_node_id | UID of the end node of the way | . | speed_kph_mean | - | . | speed_kph_stddev | - | . I will just use the mean speed and put the data into an SQL DB. ",
+    "url": "/docs/tfg/tfg.html#roads",
+    
+    "relUrl": "/docs/tfg/tfg.html#roads"
+  },"54": {
+    "doc": "TFG",
+    "title": "Graph representation",
+    "content": "For network analysis, we can represent the roads as a graph, where the nodes are the intersections and the edges are the roads. To treat this data in graph form, it’s loaded into a Networkx graph. NetworkX is a library that facilitates the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. I will use Dijkstra and A* algorithms to find the shortest path between two nodes. import networkx as nx Graph=nx.Graph() ways_nodes=queryOSM(lat,long) Graph.add_edges_from(ways_nodes) ... ShortestPath=nx.dijkstra_path(Graph,node_start,node_end) # Array de nodos ... paint(Graph) paint(ShortestPath) . Joining uber and osm data . In Networkx, the vertices or edges are added as 3-tuples (u,v,data), data is a dictionary with arbitrary information, which we want to access later, for example, during the search for the shortest path or when representing paint the graph. In data['speed'] the “current” speed is saved: . import networkx as nx Graph=nx.Graph() ways_nodes=queryOSM(lat,long) Graph.add_edges_from(ways_nodes) # Roards as gaphs ubermv.updatespeed(Graph,hora=9,dia=Friday) # Update the speed of the roads ... ShortestPath=nx.dijkstra_path(Graph,node_start,node_end) # Array de nodos ... paint(Graph) paint(ShortestPath) . Some representations . | Roads with their’s widths and colors as their average speed (greener and thicker is faster) and the shortest path in yellow. | Speeds in the shortest path. | Gif of the shortest path (Dijkstra) throughout the day . | . ",
+    "url": "/docs/tfg/tfg.html#graph-representation",
+    
+    "relUrl": "/docs/tfg/tfg.html#graph-representation"
+  },"55": {
+    "doc": "TFG",
+    "title": "Cell network (next page)",
+    "content": "Cells . ",
+    "url": "/docs/tfg/tfg.html#cell-network-next-page",
+    
+    "relUrl": "/docs/tfg/tfg.html#cell-network-next-page"
+  },"56": {
+    "doc": "TFG",
+    "title": "TFG",
+    "content": "Last Modified: 2023-Jun-29 . ",
+    "url": "/docs/tfg/tfg.html",
+    
+    "relUrl": "/docs/tfg/tfg.html"
+  }
+}
