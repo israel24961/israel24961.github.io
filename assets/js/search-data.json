@@ -85,21 +85,21 @@
   },"12": {
     "doc": "A simple project?",
     "title": "1)  Introduction",
-    "content": "Cringe motivation . The language of choice is C, because I want to try the new c23’s features, also, using OPENGL because I already know some and how much Raylib eases the development. The main motivation, little rant, I’ve started a new position as a C# backend developer, which is not boring by itself, but having started in the junior dev role with it’s corespondent low wadge makes me unmotivated to share the improvements I’ve made upon some main data pipelines. It’s kind of a bummer, but I’m not going to give up on my dreams, so I’m going to start a new project, a simple one, to keep me motivated and to keep me learning. I might make some entries about EF/C# optimizations, gotta make having read the language specification useful😀. ",
+    "content": "Cringe motivation . The language of choice is C, because I want to try the new c23’s features, also, using OPENGL because I already know some and how much Raylib eases the development. The main motivation, sadness 🤣. I might make some entries about EF/C# optimizations, gotta make having read the language specification useful😀. ",
     "url": "/docs/DroneWorld/droneworld.html#1--introduction",
     
     "relUrl": "/docs/DroneWorld/droneworld.html#1--introduction"
   },"13": {
     "doc": "A simple project?",
     "title": "2) First iteration",
-    "content": ". Nice and simple, let’s code… AAnd this is too abstracted, the main problems is what data should the opengl thread have. On this first iteration, I converted the json of the ways and nodes returned by the query into 2D paths. struct node { u64 id; double lat; double lon; }; struct way { u64 id; i64 nodesCount; struct node *nodes; }; struct elements { struct node *nodes; struct way *ways; u64 nodesCount; u64 waysCount; }; . Then turn the 2D paths into rectangles as they are roads, which are rect with some angles and curves.😥 For now in the cpu, but I think I can bake something in the geometry shader. | Path to road | . If we only have into consideration the next point, once the path angles a bit, there will be some weird effects, without making it too complicated or complex, making only 2 road points per path point should be enough. | Data structure for managing the road: For now I’m just using arrays, yep…. 10k start to hit 5 seconds | . ",
+    "content": ". | Data Road structure | . Nice and simple, let’s code… AAnd this is too abstracted, the main problems is what data should the opengl thread have. On this first iteration, I converted the json of the ways and nodes returned by the query into 2D paths. struct node { u64 id; double lat; double lon; }; struct way { u64 id; i64 nodesCount; struct node *nodes; }; struct elements { struct node *nodes; struct way *ways; u64 nodesCount; u64 waysCount; }; . Then turn the 2D paths into rectangles as they are roads, which are rect with some angles and curves.😥 ~For now in the cpu, but I think I can bake something in the geometry shader.~ I haven’t read that much about geometry shaders 😄 . | Path to road . | If we only have into consideration the next point, once the path angles a bit, there will be some weird effects, without making it too complicated or complex, making only 2 road points per path point should be enough. | Data structure for managing the road: For now I’m just using arrays, yep…. 10k start to hit 5 seconds Already developed but not blogged yet . | . Last Modified: 2024-Nov-13 . | Minimap Similar to GTA or any other game, It needs a minimap, main requirements: . | Show the player position/direction | Zoom in/out | Fetch real data from the internet For this first iteration I’ve done this simple algorithm, divide into grids in which the player is in the center (ala GTA) and make the minimap request for data about the grids that don’t have the data yet. Conveniently the data is stored in 2D arrays . | . | . Litle video showing: . ",
     "url": "/docs/DroneWorld/droneworld.html#2-first-iteration",
     
     "relUrl": "/docs/DroneWorld/droneworld.html#2-first-iteration"
   },"14": {
     "doc": "A simple project?",
     "title": "A simple project?",
-    "content": "Last Modified: 2024-Feb-20 . ",
+    "content": "Last Modified: 2024-Feb-20 . date: invalid date ‘docs/DroneWorld/droneworld.mdY’ . ",
     "url": "/docs/DroneWorld/droneworld.html",
     
     "relUrl": "/docs/DroneWorld/droneworld.html"
